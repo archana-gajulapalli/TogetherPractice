@@ -34,20 +34,16 @@ public class HomePageStep extends BaseTest {
     }
 
 
-    @Then("I get all the menu items on homepage")
-    public void iGetAllTheMenuItemsOnHomepage() {
-        homePageObj.getOptions();
-    }
 
-    @When("I select menu item {string}")
-    public void iClickOn(String pname) {
 
-        homePageObj.getMenuItem(pname);
+    @When("I select women tab")
+    public void iClickOnWomen(){
+        homePageObj.clickWomenTab();
     }
 
     @Then("I verify current url:{string}")
-    public void iVerifyCurrentUrl(String arg0) {
-        Assert.assertEquals(arg0, driver.getCurrentUrl());
+    public void iVerifyCurrentUrl(String url) {
+        Assert.assertEquals(driver.getCurrentUrl(),url);
     }
 
 

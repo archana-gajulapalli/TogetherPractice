@@ -1,6 +1,6 @@
-E:\justForYourOutFit\src\main\java\helper\Utility.java
-E:\justForYourOutFit\src\main\java\pages\CommonActionPage.java
-E:\justForYourOutFit\src\main\java\pages\LoginPage.java
-E:\justForYourOutFit\src\main\java\pages\HomePage.java
-E:\justForYourOutFit\src\main\java\pages\SearchPage.java
-E:\justForYourOutFit\src\main\java\pages\HeaderIconsPage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/pages/HomePage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/pages/LoginPage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/pages/SearchPage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/pages/CommonActionPage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/pages/HeaderIconsPage.java
+/Users/swathigudia/Applications/myworkspace/CucumberBddPoc/src/main/java/helper/Utility.java
