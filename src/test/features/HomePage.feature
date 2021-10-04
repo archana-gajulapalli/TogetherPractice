@@ -16,5 +16,6 @@ Feature: Home page
  Scenario: TC_02_Verify_MostWanted_Women_Clothing
    When I click most wanted women clothing
    Then I verify current url:"https://www.justyouroutfit.com/most-wanted/"
+
   #Then my url is: "ajhdfjagdjf"
 

@@ -32,7 +32,6 @@ public class HomePage {
 
 
     public void clickWomenTab(){
-        //webdriver driver. action
         womenTab.click();
     }
 
