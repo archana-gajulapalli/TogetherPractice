@@ -13,12 +13,16 @@ public class HeaderIconsPage {
 
 
 
-    @FindBy(xpath = "//div[@class=\"headerAccount group\"]//div[@class='icon']")
-    private WebElement loginIconBtn;
+    @FindBy(xpath = "//a[@title=\"Go to homepage\"]")
+    private WebElement justForYOurOutfitImage;
 
 
-    public boolean isLoginIconDisplayed(){
-        return loginIconBtn.isDisplayed();
+    public boolean isJfyTitleDisplayed(){
+        return justForYOurOutfitImage.isDisplayed();
 
+    }
+
+    public String getTitle(){
+        return justForYOurOutfitImage.getText();
     }
 }

@@ -1,5 +1,0 @@
-base\BaseTest.class
-steps\HeaderIconsStep.class
-steps\Hooks.class
-steps\HomePageStep.class
-runner\TestRunner.class

@@ -8,4 +8,4 @@ Feature: Common actions
   @regression
   Scenario: TC_02_Verify login icon on home page
     Given I am on home page
-    And I verify login icon is displayed
+    Then I verify login icon is displayed

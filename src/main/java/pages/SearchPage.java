@@ -24,10 +24,13 @@ public class SearchPage {
 
     }
 
-    @FindBy(xpath = "//nav[@id='mainMenu']/ul/li/a[@href='/womens/']")
+    @FindBy(xpath = "//*[@id='mainMenu']//a[@href='/womens/']")
     private WebElement menuItemWomen;
     @FindBy(xpath = "//*[@id=\"mainMenu\"]//a[@href='/womens/']/../div/ul/li[1]/a")
     private WebElement itemWomen;
+    @FindBy(xpath="//li[@data-tab=\"tab-1\"]/ul/li[3]//a[@href='/most-wanted/']")
+    private WebElement clothingMostWanted;
+
 
 
 

@@ -9,47 +9,46 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class HomePage {
-
+    //variable
     public WebDriver driver;
-
+    //constructor(java methodname=class name) and no return
     public HomePage(WebDriver driver) {
-
         this.driver = driver;
     }
 
-
+//locator
     @FindBy(xpath = "//a[@class='headerLogo']")
     private WebElement homepageLogo;
+    @FindBy(xpath="//li[@data-tab=\"tab-1\"]/ul/li[3]//a[@href='/most-wanted/']")
+    private WebElement mostWantedClothing;
+    @FindBy(xpath="//*[@id=\"mainMenu\"]//a[@href='/womens/']/../div/ul/li")
+    private WebElement womenTab;
 
+
+//java methods on elements
     public boolean verifyHomePageLogo() {
         return homepageLogo.isDisplayed();
-
-
     }
 
-    public String getOptions() {
-        List<WebElement> opts = driver.findElements(By.xpath("//*[@id=\"mainMenu\"]//a[@href='/womens/']/../div/ul/li"));// to get list of web elements
-        String optName = ""; //this is to get as string 
-        int sizeOfOpts = opts.size();
-        System.out.println(sizeOfOpts);
-        for (int i = 0; i < opts.size(); i++) {
-            optName = opts.get(i).getText();
-            System.out.println(optName);
 
-
-        }
-        return optName;
+    public void clickWomenTab(){
+        womenTab.click();
     }
 
 
     public void getMenuItem(String mName) {
-        List<WebElement> allText = driver.findElements(By.xpath("//ul[@class='menu group']"));
+        List<WebElement> allText = driver.findElements(By.xpath("//*[@id=\"mainMenu\"]//a[@href=\"/womens/\"]"));
         for (WebElement element : allText) {
             System.out.println(element.getText());
             if (element.getText().equalsIgnoreCase(mName)) {
                 element.click();
             }
         }
+    }
+
+
+    public void clickMostwantedWomenClothing(){
+        mostWantedClothing.click();
 
     }
 

@@ -3,7 +3,7 @@ package runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features ="src/test/features/Search.feature",
+@CucumberOptions(features ="src/test/features/HomePage.feature",
         glue = "steps",
         dryRun = false,
         monochrome = true,
