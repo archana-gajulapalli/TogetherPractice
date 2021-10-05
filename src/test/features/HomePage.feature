@@ -7,7 +7,8 @@ Feature: Home page
 
 @Regression
   Scenario: TC_01_Select item from menu item
-#    When I cancel pop
+    When Xbtn is dispalyed
+    When I cancel pop
     When I select women tab
     Then I verify current url:"https://www.justyouroutfit.com/womens/"
 

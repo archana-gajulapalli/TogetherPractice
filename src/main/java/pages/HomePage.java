@@ -24,9 +24,13 @@ public class HomePage {
     @FindBy(xpath="//*[@id=\"mainMenu\"]//a[@href='/womens/']/../div/ul/li")
     private WebElement womenTab;
 
+    @FindBy(xpath="//div[@class='soundest-form-without-image-close-holder']/a")
+    private WebElement cancelPopUpXbtn;
+
 
 //java methods on elements
     public boolean verifyHomePageLogo() {
+
         return homepageLogo.isDisplayed();
     }
 
@@ -34,8 +38,6 @@ public class HomePage {
     public void clickWomenTab(){
         womenTab.click();
     }
-
-
     public void getMenuItem(String mName) {
         List<WebElement> allText = driver.findElements(By.xpath("//*[@id=\"mainMenu\"]//a[@href=\"/womens/\"]"));
         for (WebElement element : allText) {
@@ -45,7 +47,16 @@ public class HomePage {
             }
         }
     }
+  public boolean isCancelPopUpBtnDisplayed(){
+        return cancelPopUpXbtn.isDisplayed();
+    }
 
+    public void clickCancelPopUpXbtn(){
+        if( cancelPopUpXbtn.isDisplayed()){
+            cancelPopUpXbtn.click();
+        }
+
+}
 
     public void clickMostwantedWomenClothing(){
         mostWantedClothing.click();
