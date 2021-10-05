@@ -33,18 +33,25 @@ public class HomePageStep extends BaseTest {
 
     }
 
+    @When("Xbtn is dispalyed")
+    public void verifyXbtnDisplayed() {
 
+        Assert.assertTrue(homePageObj.isCancelPopUpBtnDisplayed());
+    }
+
+    @When("I cancel pop")
+    public void iClickonCancelPop() {
+        homePageObj.clickCancelPopUpXbtn();}
 
 
     @When("I select women tab")
-    public void iClickOnWomen(){
-        homePageObj.clickWomenTab();
-    }
+    public void iClickOnWomen() {
+        homePageObj.clickWomenTab(); }
+
 
     @Then("I verify current url:{string}")
     public void iVerifyCurrentUrl(String url) {
         Assert.assertEquals(driver.getCurrentUrl(),url);
     }
-
 
 }
