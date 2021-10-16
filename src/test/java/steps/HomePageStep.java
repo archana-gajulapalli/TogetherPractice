@@ -26,16 +26,22 @@ public class HomePageStep extends BaseTest {
     }
     @Then("I verify title of the page conatins amazon")
     public void verifyTitle(){
-        Assert.assertTrue(homePageObj.getTitle().contains("Amazon"));
+        String title= homePageObj.getTitle();
+        System.out.println(title);
+        Assert.assertTrue(title.contains("amazon"));
     }
     @When("I search for: {string}")
     public void enetrSearchCriteria(String txt){
         homePageObj.enterSearch(txt);
-        Assert.assertTrue(homePageObj.getSearchResultsTxt().contains(txt));
+        Assert.assertTrue(homePageObj.isSearchResultsTxtDisplayed());
     }
-    @Then("I verify price text is displayed")
-    public void isPriceTextDisplaed(){
-        Assert.assertTrue(homePageObj.isPriceTxtDisplayed());
+
+
+    @When("accept cookie")
+    public void clickCookieaccept(){
+        if(homePageObj.isCookie()){
+            homePageObj.clickCookieAccept();
+        }
     }
 
 //    @And("I verify home page logo")

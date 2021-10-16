@@ -20,10 +20,12 @@ public class HomePage {
     WebElement homepageLogo;
     @FindBy(xpath="//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchInputBox;
-    @FindBy(xpath="//*[@id=\"search\"]/span/div/span//span[contains(text(),'toys')]")
+    @FindBy(xpath="//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span")
     WebElement searchResultsText;
-    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
-    WebElement priceTxt;
+//    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
+//    WebElement priceTxt;
+    @FindBy(xpath="//*[@id=\"sp-cc-accept\"]")
+    WebElement cookieAccept;
 
 
     public boolean isHomePageLogo() {
@@ -40,12 +42,19 @@ public class HomePage {
         searchInputBox.sendKeys(Keys.ENTER);
     }
 
-    public String getSearchResultsTxt(){
-        return searchResultsText.getText();
+    public boolean isSearchResultsTxtDisplayed(){
+        return searchResultsText.isDisplayed();
     }
 
-    public boolean isPriceTxtDisplayed(){
-        return priceTxt.isDisplayed();
+
+
+public boolean isCookie(){
+        return cookieAccept.isDisplayed();
+    }
+
+    public void clickCookieAccept(){
+        cookieAccept.click();
+
     }
 
 }
