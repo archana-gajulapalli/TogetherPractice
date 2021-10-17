@@ -38,11 +38,19 @@ public class HomePageStep extends BaseTest {
 
 
     @When("accept cookie")
-    public void clickCookieaccept(){
+public void clickCookiesAccept(){
         if(homePageObj.isCookie()){
             homePageObj.clickCookieAccept();
         }
     }
+
+    @And("I click on department womens braclet")
+    public void clickCategoryNecklace(){
+         if(homePageObj.isWomensBraceletDepartmentDisplaed()){
+             homePageObj.clickWoensBraceletsDepartment();
+         }
+    }
+    @Then()
 
 //    @And("I verify home page logo")
 //    public void i_verify_home_page_logo() {

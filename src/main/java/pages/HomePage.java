@@ -20,12 +20,15 @@ public class HomePage {
     WebElement homepageLogo;
     @FindBy(xpath="//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchInputBox;
-    @FindBy(xpath="//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span")
+    @FindBy(xpath="//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span[1]")
     WebElement searchResultsText;
 //    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
 //    WebElement priceTxt;
     @FindBy(xpath="//*[@id=\"sp-cc-accept\"]")
     WebElement cookieAccept;
+    @FindBy(xpath="//*[@id=\"n/10382868031\"]")
+    WebElement womensBraceletsDepartment ;
+
 
 
     public boolean isHomePageLogo() {
@@ -55,6 +58,17 @@ public boolean isCookie(){
     public void clickCookieAccept(){
         cookieAccept.click();
 
+
+
+    }
+public boolean isWomensBraceletDepartmentDisplaed(){
+        return womensBraceletsDepartment.isDisplayed();
+
+}
+
+    public void clickWoensBraceletsDepartment(){
+
+        womensBraceletsDepartment.click();
     }
 
 }
