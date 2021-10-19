@@ -27,7 +27,9 @@ public class HomePage {
     @FindBy(xpath="//*[@id=\"sp-cc-accept\"]")
     WebElement cookieAccept;
     @FindBy(xpath="//*[@id=\"n/10382868031\"]")
-    WebElement womensBraceletsDepartment ;
+    WebElement womensBraceletsDepartment;
+    @FindBy(xpath="//*[@id=\"n/10382861031\"]")
+    WebElement WomensBraceletText;
 
 
 

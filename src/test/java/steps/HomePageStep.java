@@ -50,7 +50,12 @@ public void clickCookiesAccept(){
              homePageObj.clickWoensBraceletsDepartment();
          }
     }
-    @Then()
+    @Then("I verify womens bracelet text is displayed")
+    public void womensBraceletText(String txt){
+        homePageObj.Womensbracelet(txt);
+        Assert.assertTrue(homePageObj.isWomensBraceletTextDisplayed());
+    }
+
 
 //    @And("I verify home page logo")
 //    public void i_verify_home_page_logo() {
