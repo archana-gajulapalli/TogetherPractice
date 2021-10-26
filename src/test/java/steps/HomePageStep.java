@@ -50,11 +50,11 @@ public void clickCookiesAccept(){
              homePageObj.clickWoensBraceletsDepartment();
          }
     }
-    @Then("I verify womens bracelet text is displayed")
-    public void womensBraceletText(String txt){
-        homePageObj.Womensbracelet(txt);
-        Assert.assertTrue(homePageObj.isWomensBraceletTextDisplayed());
-    }
+//    @Then("I verify womens bracelet text is displayed")
+//    public void womensBraceletText(String txt){
+//        homePageObj.WomensBraceletText(txt);
+//        Assert.assertTrue(homePageObj.isWomensBraceletTextDisplayed());
+//    }
 
 
 //    @And("I verify home page logo")
