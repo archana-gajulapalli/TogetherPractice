@@ -18,8 +18,8 @@ public class BaseTest {
     protected LoginPage loginPageObj;
     protected SearchPage searchPageObj;
     protected Utility util;
-    protected CommonActionPage commonActionPageObj;
-    public static Logger logger;
+
+
 
 
 
@@ -30,7 +30,7 @@ public class BaseTest {
         loginPageObj=PageFactory.initElements(driver, LoginPage.class);
         searchPageObj=PageFactory.initElements(driver, SearchPage.class);
         util=PageFactory.initElements(driver, Utility.class);
-        commonActionPageObj=PageFactory.initElements(driver, CommonActionPage.class);
+
 
     }
 

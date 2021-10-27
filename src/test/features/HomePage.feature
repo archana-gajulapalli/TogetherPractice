@@ -1,22 +1,18 @@
-@Mainataince
 Feature: Home page
 
-  Background: user is on just for your outfit application
-    Given I am on home page:"URL"
-    Then I verify title is displayed
+  Background: iam background for amazon .....this is just name no execution
+    Given I am on home page
+    When accept cookie
+    Then I verify if logo is displayed
+    #Then I verify title of the page conatins amazon
 
-@Regression
-  Scenario: TC_01_Select item from menu item
-    When Xbtn is dispalyed
-    When I cancel pop
-    When I select women tab
-    Then I verify current url:"https://www.justyouroutfit.com/womens/"
+Scenario: test womens department braclet
+  #accept cookie
+     When I search for: "jewellery"
+     And I click on department womens braclet
+  #//*[@id="n/10382861031"]
+    # Then I verify womens bracelet text is displayed
 
 
-@MyScenario
- Scenario: TC_02_Verify_MostWanted_Women_Clothing
-   When I click most wanted women clothing
-   Then I verify current url:"https://www.justyouroutfit.com/most-wanted/"
 
-  #Then my url is: "ajhdfjagdjf"
 

@@ -1,9 +1,9 @@
 .idea/*
-target
-test-output
-.vscode/*
+target/*
+test-output/*
 .settings/
 .project
 .classpath
+
 
 

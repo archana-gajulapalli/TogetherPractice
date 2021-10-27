@@ -7,7 +7,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         glue = "steps",
         dryRun = false,
         monochrome = true,
-        tags={"@regression"},
         plugin = {"pretty","html:test-output"})
 public class TestRunner extends AbstractTestNGCucumberTests {
 
