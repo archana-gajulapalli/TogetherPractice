@@ -1,3 +1,4 @@
+@Regression
 Feature: Home page
 
   Background: iam background for amazon .....this is just name no execution
