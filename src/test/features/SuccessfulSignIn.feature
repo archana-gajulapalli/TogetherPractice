@@ -2,7 +2,6 @@
 Feature:SignIN Happy path
   Background: I am background for amazon web application
     Given I am on home page
-    When accept cookie
     Then I verify if logo is displayed
 
   Scenario: TC_01_SignIn Successful
