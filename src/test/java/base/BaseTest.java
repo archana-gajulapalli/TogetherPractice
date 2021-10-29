@@ -7,12 +7,14 @@ import pages.*;
 
 public class BaseTest {
     protected HomePage homePageObj;
+    protected SignInPage signInPageObj;
     public static WebDriver driver;
     protected Utility util;
 
     public BaseTest(){
         homePageObj= PageFactory.initElements(driver, HomePage.class);
-        util=PageFactory.initElements(driver, Utility.class);
+        signInPageObj=PageFactory.initElements(driver, SignInPage.class);
+        util = PageFactory.initElements(driver, Utility.class);
 
 
     }

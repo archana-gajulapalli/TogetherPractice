@@ -1,1 +1,55 @@
-# CucumberBddPoc
+swathigudia@swathigudias-MacBook-Pro TogetherPractice % echo $PATH
+/opt/apache-maven-3.8.3/bin::$/Users/swathigudia/Documents/Myworkspace/apache-maven-3.8.3
+/////ERROR.......MODIFICATION AND HOW TO SET UP terminal when its mad :{/////
+echo $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="$PATH:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home"
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+pwd
+/Users/swathigudia/workspace/TogetherPractice
+cd ..
+pwd
+/Users/swathigudia/workspace
+cd ..
+pwd
+/Users/swathigudia
+cd libs/apache-maven-3.8.3
+pwd
+/Users/swathigudia/libs/apache-maven-3.8.3
+swathigudia@swathigudias-MacBook-Pro apache-maven-3.8.3 % cd bin
+
+pwd
+/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro bin % echo $PATH
+
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+cd ~
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+export PATH="$PATH:/Users/swathigudia/libs/apache-maven-3.8.3/bin"
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro ~ % which git
+/usr/bin/git
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro ~ % export PATH="$PATH:/usr/bin/git"
+swathigudia@swathigudias-MacBook-Pro ~ % echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git
+swathigudia@swathigudias-MacBook-Pro ~ % echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git
+swAthigudia@swathigudias-MacBook-Pro ~ % cd /Users/swathigudia/workspace/TogetherPractic
+swathigudia@swathigudias-MacBook-Pro TogetherPractice % pwd
+/Users/swat/Users/swathigudia/workspace/TogetherPractice
+swathigudia@swathigudias-MacBook-Pro TogetherPractice % mvn
+mvn clean install
+
+
+/////Jenkins password—>
+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
+
+command + f
+command + shift+ F --> global search

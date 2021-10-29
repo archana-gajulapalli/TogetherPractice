@@ -1,14 +1,18 @@
 package pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.security.Signature;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class HomePage {
     //variable
     public WebDriver driver;
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -18,59 +22,68 @@ public class HomePage {
     WebElement titleHomePage;
     @FindBy(xpath = "//a[@href=\"/ref=nav_logo\"]")
     WebElement homepageLogo;
-    @FindBy(xpath="//*[@id=\"twotabsearchtextbox\"]")
+    @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchInputBox;
-    @FindBy(xpath="//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span[1]")
+    @FindBy(xpath = "//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span[1]")
     WebElement searchResultsText;
-//    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
+    //    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
 //    WebElement priceTxt;
-    @FindBy(xpath="//*[@id=\"sp-cc-accept\"]")
+    @FindBy(xpath = "//*[@id=\"sp-cc-accept\"]")
     WebElement cookieAccept;
-    @FindBy(xpath="//*[@id=\"n/10382868031\"]")
+    @FindBy(xpath = "//*[@id=\"n/10382868031\"]")
     WebElement womensBraceletsDepartment;
-    @FindBy(xpath="//*[@id=\"n/10382861031\"]")
+    @FindBy(xpath = "//*[@id=\"n/10382861031\"]")
     WebElement WomensBraceletText;
+    @FindBy(xpath = "//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']")
+    WebElement signInBtn;
 
 
 
-    public boolean isHomePageLogo() {
+
+        public boolean isHomePageLogo() {
         return homepageLogo.isDisplayed();
     }
 
-
-    public String getTitle(){
+    public String getTitle() {
         return titleHomePage.getText();
     }
-    public void enterSearch(String searchText){
+
+    public void enterSearch(String searchText) {
         searchInputBox.click();
         searchInputBox.sendKeys(searchText);
         searchInputBox.sendKeys(Keys.ENTER);
     }
-
-    public boolean isSearchResultsTxtDisplayed(){
+    public boolean isSearchResultsTxtDisplayed() {
         return searchResultsText.isDisplayed();
     }
 
-
-
-public boolean isCookie(){
+    //true //false
+    public boolean isCookie() {
         return cookieAccept.isDisplayed();
     }
 
-    public void clickCookieAccept(){
+    public void clickCookieAccept() {
         cookieAccept.click();
-
-
-
     }
-public boolean isWomensBraceletDepartmentDisplaed(){
+
+    public boolean isWomensBraceletDepartmentDisplaed() {
         return womensBraceletsDepartment.isDisplayed();
-
-}
-
-    public void clickWoensBraceletsDepartment(){
+    }
+    public void clickWoensBraceletsDepartment() {
 
         womensBraceletsDepartment.click();
     }
+    public void clickSignInBtn() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+       //mouse action
+        Actions actionProvider = new Actions(driver);
+        actionProvider.moveToElement(signInBtn);
+        //javascript element click // element not interactable exeception
+        WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", signInButton);
+    }
+
+
 
 }
