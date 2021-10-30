@@ -15,7 +15,7 @@ Scenario: test womens department braclet
 
   #//*[@id="n/10382861031"]
     # Then I verify womens bracelet text is displayed
-  Scenario:
+
 
 
 

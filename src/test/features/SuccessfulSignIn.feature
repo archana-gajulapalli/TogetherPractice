@@ -15,7 +15,3 @@ Feature:SignIN Happy path
 #    Then I  verify user is successfully signed in
 #
 
-
-
-
-
