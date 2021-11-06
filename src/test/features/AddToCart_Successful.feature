@@ -6,7 +6,7 @@ Feature: Home page
     When accept cookie
     Then I verify if logo is displayed
 
-    #Then I verify title of the page conatins amazon
+    #Then I verify title of the page contains amazon
 
 Scenario: test womens department braclet
   #accept cookie

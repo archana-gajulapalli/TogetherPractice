@@ -22,7 +22,17 @@ public class SignInPageStep extends BaseTest {
         System.out.println("Expected text is:"+textFromScenario);
         //a=a
         //compare two strings
-        Assert.assertEquals(signInPageObj.getSignInText(),textFromScenario);
+        Assert.assertEquals(textFromMethod,textFromScenario);
+    }
+
+    @Then("I verify error message is{string}")
+    public void iVerifyErrorMessageIs(String errorMessageFromScenario) {
+        String errormessage = signInPageObj.getErrorMessageText();
+        System.out.println("Actual text is:"+ errormessage);
+        System.out.println("Expected text is:"+errorMessageFromScenario);
+        //a=a
+        //compare two strings
+        Assert.assertEquals(errormessage,errorMessageFromScenario);
     }
 
     @And("I enter email address:{string}")
@@ -40,13 +50,10 @@ public class SignInPageStep extends BaseTest {
         signInPageObj.enterPassword(pwd);
     }
 
-    @Then("I  verify user is successfully signed in")
-    public void iVerifyUserIsSuccessfullySignedIn() {
+    @And("I click pwd sign In Btn")
+    public void clickSignInBtn() {
         signInPageObj.clickSignInSubmitBtn();
     }
-
-
-
 
 
 

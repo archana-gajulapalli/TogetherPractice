@@ -15,16 +15,19 @@ public class SignInPage {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//*[@id=\"authportal-main-section\"]/div[2]/div/div[1]/form/div/div/div/h1")
+    @FindBy(xpath = "//div[@class=\"a-box-inner a-padding-extra-large\"]/h1")
     WebElement signInText;//variable
     @FindBy(xpath = "//*[@id=\"ap_email\"]")
     WebElement emailInputBox;
+    //// step 1/////
     @FindBy(xpath = "//*[@id=\"continue\"]")
     WebElement continueBtn;
     @FindBy(xpath = "//*[@id=\"ap_password\"]")
     WebElement passwordInputbox;
     @FindBy(xpath = "//*[@id=\"signInSubmit\"]")
     WebElement signInBtn;
+    @FindBy(xpath ="//*[@id=\"auth-error-message-box\"]//span")
+    WebElement errorCredentialText;
 
     //accesstype returntype methodname(){}
     //String
@@ -37,13 +40,11 @@ public class SignInPage {
         System.out.println(text);
         return text;
     }
-
     //boolean
     public boolean isSignInTextDisplayed(){
         return signInText.isDisplayed();
     }
-
-    //click and whenYouwantToEnterInput
+    //click and whenYouwantToEnterInput ////step  2///
     public void enterEmailId(String email){
         emailInputBox.sendKeys(email);
     }
@@ -51,11 +52,18 @@ public class SignInPage {
         continueBtn.click();
     }
     public void enterPassword(String pwd){
-        passwordInputbox.sendKeys(pwd);
-    }
+        passwordInputbox.sendKeys(pwd);}
+
     public void clickSignInSubmitBtn() {
         signInBtn.click();
     }
+    public String getErrorMessageText(){
+        String text= errorCredentialText.getText();
+        System.out.println(text);
+        return text;
+    }
+
+
 
 
 

@@ -9,11 +9,12 @@ import java.security.Signature;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class HomePage {
+public class UnregisteredUserHomePage {
     //variable
     public WebDriver driver;
 
-    public HomePage(WebDriver driver) {
+    public UnregisteredUserHomePage(WebDriver driver) {
+
         this.driver = driver;
     }
 

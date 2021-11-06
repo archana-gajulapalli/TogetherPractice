@@ -1,12 +1,12 @@
-swathigudia@swathigudias-MacBook-Pro TogetherPractice % echo $PATH
+PATHswathigudia@swathigudias-MacBook-Pro TogetherPractice % echo $PATH
 /opt/apache-maven-3.8.3/bin::$/Users/swathigudia/Documents/Myworkspace/apache-maven-3.8.3
 /////ERROR.......MODIFICATION AND HOW TO SET UP terminal when its mad :{/////
 echo $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="$PATH:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home"
-echo $PATH
+
+
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
 pwd
 /Users/swathigudia/workspace/TogetherPractice
@@ -47,10 +47,24 @@ swathigudia@swathigudias-MacBook-Pro TogetherPractice % pwd
 swathigudia@swathigudias-MacBook-Pro TogetherPractice % mvn
 mvn clean install
 
-
 /////Jenkins password—>
-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
 
+
+ctrl+r -->
+swathigudia@swathigudiasMBP TogetherPractice % cat /Users/swathigudia/.jenkins/secrets/initialAdminPassword
+bb61d9e1e19e4c18b877bacf4abf4736
+
+/////
 command + f
 command + shift+ F --> global search
 control+r history of command from terminal
+
+public void clickSignInBtn() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+       //mouse action
+        Actions actionProvider = new Actions(driver);
+        actionProvider.moveToElement(signInBtn);
+        //javascript element click // element not interactable exeception
+        WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", signInButton);
