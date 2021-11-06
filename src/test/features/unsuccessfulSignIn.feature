@@ -20,4 +20,4 @@
       And I click continue btn
       And I enter password:"checkme12"
       And I click pwd sign In Btn
-      Then I verify error message is"Your password is incorrect"
+      Then I verify error message is"To better protect your account, please re-enter your password and then enter the characters as they are shown in the image below."
