@@ -43,7 +43,9 @@ public class SignInPage {
     //boolean
     public boolean isSignInTextDisplayed(){
         return signInText.isDisplayed();
+
     }
+    //pubilc boolean isSignInBtnD
     //click and whenYouwantToEnterInput ////step  2///
     public void enterEmailId(String email){
         emailInputBox.sendKeys(email);
@@ -55,16 +57,14 @@ public class SignInPage {
         passwordInputbox.sendKeys(pwd);}
 
     public void clickSignInSubmitBtn() {
+
         signInBtn.click();
+        driver.navigate().refresh();
     }
     public String getErrorMessageText(){
         String text= errorCredentialText.getText();
         System.out.println(text);
         return text;
     }
-
-
-
-
 
 }

@@ -13,11 +13,15 @@
       Then I verify error message is"We cannot find an account with that e-mail address"
 
 
-    Scenario: Tc_03_signIn Unsuccessful with invalid password
+    Scenario Outline: Tc_03_signIn Unsuccessful with invalid password
       When I click sign in btn
       Then I verify "Sign-In" Text is displayed
-      And I enter email address:"demoT2728@gmail.com"
+      And I enter email address:"gudia.swathi05@gmail.com"
       And I click continue btn
-      And I enter password:"checkme12"
+      And I enter password:"<incorrectpasswordvalue>"
       And I click pwd sign In Btn
-      Then I verify error message is"To better protect your account, please re-enter your password and then enter the characters as they are shown in the image below."
+#      Then I verify "sign Btn" is displayed
+      Examples:
+      |incorrectpasswordvalue|
+      |abcd|
+      |1234|
