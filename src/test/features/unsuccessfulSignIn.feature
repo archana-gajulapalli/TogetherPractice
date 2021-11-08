@@ -25,3 +25,4 @@
       |incorrectpasswordvalue|
       |abcd|
       |1234|
+      |****|
