@@ -26,7 +26,7 @@ public class SignInPage {
     WebElement passwordInputbox;
     @FindBy(xpath = "//*[@id=\"signInSubmit\"]")
     WebElement signInBtn;
-    @FindBy(xpath ="//*[@id=\"auth-error-message-box\"]//span")
+    @FindBy(xpath = "//*[@id=\"auth-error-message-box\"]//span")
     WebElement errorCredentialText;
 
     //accesstype returntype methodname(){}
@@ -34,37 +34,46 @@ public class SignInPage {
     public String getSignInPageTitle() {
         return driver.getTitle();
     }
+
     //what is you name --> it will return what ever text is for that element
     public String getSignInText() {
-        String text=  signInText.getText();
+        String text = signInText.getText();
         System.out.println(text);
         return text;
     }
-    //boolean
-    public boolean isSignInTextDisplayed(){
-        return signInText.isDisplayed();
 
+    //boolean
+    public boolean isSignInTextDisplayed() {
+        return signInText.isDisplayed();
     }
-    //pubilc boolean isSignInBtnD
+
     //click and whenYouwantToEnterInput ////step  2///
-    public void enterEmailId(String email){
+    public void enterEmailId(String email) {
         emailInputBox.sendKeys(email);
     }
+
     public void clickConitnueBtn() {
         continueBtn.click();
     }
-    public void enterPassword(String pwd){
-        passwordInputbox.sendKeys(pwd);}
+
+    public void enterPassword(String pwd) {
+        passwordInputbox.sendKeys(pwd);
+    }
 
     public void clickSignInSubmitBtn() {
 
         signInBtn.click();
         driver.navigate().refresh();
     }
-    public String getErrorMessageText(){
-        String text= errorCredentialText.getText();
+
+    public String getErrorMessageText() {
+        String text = errorCredentialText.getText();
         System.out.println(text);
         return text;
+    }
+
+    public boolean isSignInBtnDisplayed() {
+        return signInBtn.isDisplayed();
     }
 
 }

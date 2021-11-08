@@ -11,28 +11,29 @@ public class SignInPageStep extends BaseTest {
     public void iVerifySignInPageTitle(String title) {
         String signInTitle = signInPageObj.getSignInPageTitle();
         System.out.println(signInTitle);
-      Assert.assertEquals(signInTitle,title);
+        Assert.assertEquals(signInTitle, title);
     }
 
     //verification of the text containing signin
-    @And("I verify {string} Text is displayed")//glue for feature file and step def
+    //glue for feature file and step def
+    @Then("I get Text:{string}")
     public void iVerifyTextIsDisplayed(String textFromScenario) {
         String textFromMethod = signInPageObj.getSignInText();
-        System.out.println("Actual text is:"+ textFromMethod);
-        System.out.println("Expected text is:"+textFromScenario);
+        System.out.println("Actual text is:" + textFromMethod);
+        System.out.println("Expected text is:" + textFromScenario);
         //a=a
         //compare two strings
-        Assert.assertEquals(textFromMethod,textFromScenario);
+        Assert.assertEquals(textFromMethod, textFromScenario);
     }
 
-    @Then("I verify error message is{string}")
+    @Then("I get errorMessage Text:{string}")
     public void iVerifyErrorMessageIs(String errorMessageFromScenario) {
         String errormessage = signInPageObj.getErrorMessageText();
-        System.out.println("Actual text is:"+ errormessage);
-        System.out.println("Expected text is:"+errorMessageFromScenario);
+        System.out.println("Actual text is:" + errormessage);
+        System.out.println("Expected text is:" + errorMessageFromScenario);
         //a=a
         //compare two strings
-        Assert.assertEquals(errormessage,errorMessageFromScenario);
+        Assert.assertEquals(errormessage, errorMessageFromScenario);
     }
 
     @And("I enter email address:{string}")
@@ -40,6 +41,7 @@ public class SignInPageStep extends BaseTest {
         signInPageObj.enterEmailId(email);
 
     }
+
     @And("I click continue btn")
     public void iClickContinueBtn() {
         signInPageObj.clickConitnueBtn();
@@ -55,8 +57,10 @@ public class SignInPageStep extends BaseTest {
         signInPageObj.clickSignInSubmitBtn();
     }
 
-
-
+    @Then("I verify signIn Btn is displayed")
+    public void iverifySignInBtnDisplayed() {
+        Assert.assertTrue(signInPageObj.isSignInBtnDisplayed());
+    }
 }
 
 

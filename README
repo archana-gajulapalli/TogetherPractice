@@ -1,6 +1,16 @@
 PATHswathigudia@swathigudias-MacBook-Pro TogetherPractice % echo $PATH
 /opt/apache-maven-3.8.3/bin::$/Users/swathigudia/Documents/Myworkspace/apache-maven-3.8.3
 /////ERROR.......MODIFICATION AND HOW TO SET UP terminal when its mad :{/////
+/////////////////////////////////////////
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git"
+
+one command to hot fix git !!!!!
+
+///////////////////////////////////////
+
+
+
+
 echo $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 echo $PATH
