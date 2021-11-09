@@ -1,1 +1,87 @@
-# CucumberBddPoc
+PATHswathigudia@swathigudias-MacBook-Pro TogetherPractice % echo $PATH
+/opt/apache-maven-3.8.3/bin::$/Users/swathigudia/Documents/Myworkspace/apache-maven-3.8.3
+/////ERROR.......MODIFICATION AND HOW TO SET UP terminal when its mad :{/////
+/////////////////////////////////////////
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git"
+
+one command to hot fix git !!!!!
+
+///////////////////////////////////////
+
+
+
+
+echo $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+pwd
+/Users/swathigudia/workspace/TogetherPractice
+cd ..
+pwd
+/Users/swathigudia/workspace
+cd ..
+pwd
+/Users/swathigudia
+cd libs/apache-maven-3.8.3
+pwd
+/Users/swathigudia/libs/apache-maven-3.8.3
+swathigudia@swathigudias-MacBook-Pro apache-maven-3.8.3 % cd bin
+
+pwd
+/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro bin % echo $PATH
+
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+cd ~
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+export PATH="$PATH:/Users/swathigudia/libs/apache-maven-3.8.3/bin"
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro ~ % which git
+/usr/bin/git
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin
+swathigudia@swathigudias-MacBook-Pro ~ % export PATH="$PATH:/usr/bin/git"
+swathigudia@swathigudias-MacBook-Pro ~ % echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git
+swathigudia@swathigudias-MacBook-Pro ~ % echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git
+swAthigudia@swathigudias-MacBook-Pro ~ % cd /Users/swathigudia/workspace/TogetherPractic
+swathigudia@swathigudias-MacBook-Pro TogetherPractice % pwd
+/Users/swat/Users/swathigudia/workspace/TogetherPractice
+swathigudia@swathigudias-MacBook-Pro TogetherPractice % mvn
+mvn clean install
+
+/////Jenkins password—>
+
+
+ctrl+r -->
+swathigudia@swathigudiasMBP TogetherPractice % cat /Users/swathigudia/.jenkins/secrets/initialAdminPassword
+bb61d9e1e19e4c18b877bacf4abf4736
+
+/////
+command + f
+command + shift+ F --> global search
+control+r history of command from terminal
+
+public void clickSignInBtn() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+       //mouse action
+        Actions actionProvider = new Actions(driver);
+        actionProvider.moveToElement(signInBtn);
+        //javascript element click // element not interactable exeception
+        WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", signInButton);
+
+   }
+   
+   locator for amazon>toys search>first product>"Osmo - Super Studio Disney Frozen 2 Starter Kit Learn to Draw Elsa, Anna, Olaf - (Osmo - iPad Base Included) - Ages 5-10+"
+    homepage> firstProductTitle xpath ="//div[@data-component-id="105"]//h2//span"
+        
+        

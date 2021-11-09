@@ -7,7 +7,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import pages.SignInPage;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -21,35 +23,51 @@ public class HomePageStep extends BaseTest {
     }
 
     @Then("I verify if logo is displayed")
-    public void isLogoDisplayed(){
+    public void isLogoDisplayed() {
         Assert.assertTrue(homePageObj.isHomePageLogo());
     }
-    @Then("I verify title of the page conatins amazon")
-    public void verifyTitle(){
-        String title= homePageObj.getTitle();
+
+    @Then("I verify title of the page conatains amazon")
+    public void verifyTitle() {
+        String title = homePageObj.getTitle();
         System.out.println(title);
         Assert.assertTrue(title.contains("amazon"));
     }
+
     @When("I search for: {string}")
-    public void enetrSearchCriteria(String txt){
+    public void enterSearchCriteria(String txt) {
         homePageObj.enterSearch(txt);
         Assert.assertTrue(homePageObj.isSearchResultsTxtDisplayed());
     }
 
 
-    @When("accept cookie")
-public void clickCookiesAccept(){
+    @When ("I click sign in btn")
+    public void clickSignInBtn(){
+        homePageObj.clickSignInBtn();
+
+    }
+
+    @And("I click on first search item")
+    public void clickFirstItem(){
+        homePageObj.clickFirstSearchItem();
+    }
+
+    @And("I accept cookies")
+    public void acceptCookie(){
         if(homePageObj.isCookie()){
             homePageObj.clickCookieAccept();
+            Assert.assertTrue(!homePageObj.isCookie());
         }
     }
 
-    @And("I click on department womens braclet")
-    public void clickCategoryNecklace(){
-         if(homePageObj.isWomensBraceletDepartmentDisplaed()){
-             homePageObj.clickWoensBraceletsDepartment();
-         }
-    }
+
+
+
+
+
+
+
+
 //    @Then("I verify womens bracelet text is displayed")
 //    public void womensBraceletText(String txt){
 //        homePageObj.WomensBraceletText(txt);

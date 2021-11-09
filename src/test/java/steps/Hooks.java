@@ -16,7 +16,6 @@ public class Hooks extends BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-
     }
     @After
     public void TearDown(){
