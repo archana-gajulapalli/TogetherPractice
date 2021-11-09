@@ -52,6 +52,14 @@ public class HomePageStep extends BaseTest {
         homePageObj.clickFirstSearchItem();
     }
 
+    @And("I accept cookies")
+    public void acceptCookie(){
+        if(homePageObj.isCookie()){
+            homePageObj.clickCookieAccept();
+            Assert.assertTrue(!homePageObj.isCookie());
+        }
+    }
+
 
 
 

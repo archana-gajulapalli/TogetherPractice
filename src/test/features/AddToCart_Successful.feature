@@ -3,6 +3,7 @@ Feature: Home page
 
   Background: I am background for amazon web application
     Given I am on home page
+    And I accept cookies
     Then I verify if logo is displayed
 
 Scenario: TC_01_Verify Product Title

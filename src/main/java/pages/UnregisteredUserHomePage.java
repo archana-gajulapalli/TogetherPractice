@@ -18,7 +18,8 @@ public class UnregisteredUserHomePage {
         this.driver = driver;
     }
 
-
+    @FindBy(xpath="//*[@id='a-autoid-0']")
+    WebElement cookieAccept;
     @FindBy(xpath = "//title")
     WebElement titleHomePage;
     @FindBy(xpath = "//a[@href=\"/ref=nav_logo\"]")
@@ -67,6 +68,10 @@ public class UnregisteredUserHomePage {
 
     //true //false
 
+    public boolean i() {
+        return firstProductTitle.isDisplayed();
+    }
+
     public void clickSignInBtn() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
        //mouse action
@@ -76,6 +81,15 @@ public class UnregisteredUserHomePage {
         WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", signInButton);
+    }
+    public boolean isCookie(){
+        return cookieAccept.isDisplayed();
+    }
+        
+    public void clickCookieAccept(){    
+        cookieAccept.click();
+        
+        
     }
 
 
