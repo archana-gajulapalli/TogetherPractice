@@ -67,11 +67,6 @@ public class UnregisteredUserHomePage {
 
     //true //false
 
-
-    public boolean i() {
-        return firstProductTitle.isDisplayed();
-    }
-
     public void clickSignInBtn() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
        //mouse action

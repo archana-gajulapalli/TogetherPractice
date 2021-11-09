@@ -10,7 +10,6 @@ Scenario: TC_01_Verify Product Title
      And I click on first search item
     Then I verify product title
 
-#
 #  Scenario: TC_02_Verify product Quantity added
 #    When I select quantity
 #     And I click on add to basket
