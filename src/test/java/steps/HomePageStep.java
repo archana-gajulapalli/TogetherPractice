@@ -56,8 +56,8 @@ public class HomePageStep extends BaseTest {
     public void acceptCookie(){
         if(homePageObj.isCookie()){
             homePageObj.clickCookieAccept();
-            Assert.assertTrue(!homePageObj.isCookie());
         }
+        Assert.assertTrue(!homePageObj.isCookie());
     }
 
 
