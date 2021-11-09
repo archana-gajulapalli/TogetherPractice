@@ -27,7 +27,7 @@ public class HomePageStep extends BaseTest {
         Assert.assertTrue(homePageObj.isHomePageLogo());
     }
 
-    @Then("I verify title of the page conatins amazon")
+    @Then("I verify title of the page conatains amazon")
     public void verifyTitle() {
         String title = homePageObj.getTitle();
         System.out.println(title);
@@ -41,30 +41,23 @@ public class HomePageStep extends BaseTest {
     }
 
 
-    @When("accept cookie")
-    public void clickCookiesAccept(){
-        //true
-        if (homePageObj.isCookie()) {
-            homePageObj.clickCookieAccept();
-
-        }
-          //  Assert.assertFalse(homePageObj.isCookie());
-    }
-
-
-    @And("I click on department womens braclet")
-    public void clickCategoryNecklace() {
-        if (homePageObj.isWomensBraceletDepartmentDisplaed()) {
-            homePageObj.clickWoensBraceletsDepartment();
-        }
-
-}
-
     @When ("I click sign in btn")
     public void clickSignInBtn(){
         homePageObj.clickSignInBtn();
 
     }
+
+    @And("I click on first search item")
+    public void clickFirstItem(){
+        homePageObj.clickFirstSearchItem();
+    }
+
+
+
+
+
+
+
 
 
 //    @Then("I verify womens bracelet text is displayed")

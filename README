@@ -78,7 +78,7 @@ public void clickSignInBtn() {
         WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", signInButton);
-        
+
    }
    
    locator for amazon>toys search>first product>"Osmo - Super Studio Disney Frozen 2 Starter Kit Learn to Draw Elsa, Anna, Olaf - (Osmo - iPad Base Included) - Ages 5-10+"

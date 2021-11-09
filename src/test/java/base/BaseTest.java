@@ -8,13 +8,16 @@ import pages.*;
 public class BaseTest {
     protected UnregisteredUserHomePage homePageObj;
     protected SignInPage signInPageObj;
+    protected ProductDescriptionPage productDescriptionPageObj;
+    protected TopBlackActionPage topBlackActionPageObj;
     public static WebDriver driver;
     protected Utility util;
 
     public BaseTest(){
         homePageObj= PageFactory.initElements(driver, UnregisteredUserHomePage.class);
         signInPageObj= PageFactory.initElements(driver, SignInPage.class);
-
+        productDescriptionPageObj= PageFactory.initElements(driver, ProductDescriptionPage.class);
+        topBlackActionPageObj= PageFactory.initElements(driver,TopBlackActionPage.class);
         util = PageFactory.initElements(driver, Utility.class);
 
 

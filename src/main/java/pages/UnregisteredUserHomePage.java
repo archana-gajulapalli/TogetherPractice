@@ -29,17 +29,24 @@ public class UnregisteredUserHomePage {
     WebElement searchResultsText;
     //    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
 //    WebElement priceTxt;
-    @FindBy(xpath = "//*[@id=\"sp-cc-accept\"]")
-    WebElement cookieAccept;
-    @FindBy(xpath = "//*[@id=\"n/10382868031\"]")
-    WebElement womensBraceletsDepartment;
-    @FindBy(xpath = "//*[@id=\"n/10382861031\"]")
-    WebElement WomensBraceletText;
+
+
+
+    @FindBy(xpath="//div[@data-component-id=\"114\"]//h2//span")
+    WebElement firstProductTitle;
+
+
     @FindBy(xpath = "//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']")
     WebElement signInBtn;
 
 
+    public void clickFirstSearchItem() {
+        firstProductTitle.click();
 
+    }
+    public String getFirstProductTitle(){
+        return firstProductTitle.getText();
+    }
 
         public boolean isHomePageLogo() {
         return homepageLogo.isDisplayed();
@@ -59,21 +66,12 @@ public class UnregisteredUserHomePage {
     }
 
     //true //false
-    public boolean isCookie() {
-        return cookieAccept.isDisplayed();
+
+
+    public boolean i() {
+        return firstProductTitle.isDisplayed();
     }
 
-    public void clickCookieAccept() {
-        cookieAccept.click();
-    }
-
-    public boolean isWomensBraceletDepartmentDisplaed() {
-        return womensBraceletsDepartment.isDisplayed();
-    }
-    public void clickWoensBraceletsDepartment() {
-
-        womensBraceletsDepartment.click();
-    }
     public void clickSignInBtn() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
        //mouse action
@@ -84,6 +82,8 @@ public class UnregisteredUserHomePage {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", signInButton);
     }
+
+
 
 
 
