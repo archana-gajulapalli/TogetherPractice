@@ -16,12 +16,10 @@ import java.util.concurrent.TimeUnit;
 
 public class HomePageStep extends BaseTest {
 
-
-    @Given("I am on home page")
-    public void i_am_on_home_page() throws IOException {
+    @Given("I launch amazon url")
+    public void i_Launch_Url() throws IOException {
         driver.get(util.readPropertyFile("URL"));
     }
-
     @Then("I verify if logo is displayed")
     public void isLogoDisplayed() {
         Assert.assertTrue(homePageObj.isHomePageLogo());
@@ -33,20 +31,15 @@ public class HomePageStep extends BaseTest {
         System.out.println(title);
         Assert.assertTrue(title.contains("amazon"));
     }
-
     @When("I search for: {string}")
     public void enterSearchCriteria(String txt) {
         homePageObj.enterSearch(txt);
         Assert.assertTrue(homePageObj.isSearchResultsTxtDisplayed());
     }
-
-
     @When ("I click sign in btn")
     public void clickSignInBtn(){
-        homePageObj.clickSignInBtn();
-
+        topBlackActionPageObj.clickSignInBtn();
     }
-
     @And("I click on first search item")
     public void clickFirstItem(){
         homePageObj.clickFirstSearchItem();
@@ -57,16 +50,8 @@ public class HomePageStep extends BaseTest {
         if(homePageObj.isCookie()){
             homePageObj.clickCookieAccept();
         }
-        Assert.assertTrue(!homePageObj.isCookie());
+///       Assert.assertTrue(!homePageObj.isCookie());
     }
-
-
-
-
-
-
-
-
 
 //    @Then("I verify womens bracelet text is displayed")
 //    public void womensBraceletText(String txt){
@@ -85,11 +70,5 @@ public class HomePageStep extends BaseTest {
 //        jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 //
 //    }
-
-
-
-
-
-
 
 }

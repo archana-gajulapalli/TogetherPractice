@@ -29,6 +29,8 @@ public class SignInPage {
     @FindBy(xpath = "//*[@id=\"auth-error-message-box\"]//span")
     WebElement errorCredentialText;
 
+
+
     //accesstype returntype methodname(){}
     //String
     public String getSignInPageTitle() {
@@ -46,6 +48,7 @@ public class SignInPage {
     public boolean isSignInTextDisplayed() {
         return signInText.isDisplayed();
     }
+
 
     //click and whenYouwantToEnterInput ////step  2///
     public void enterEmailId(String email) {
@@ -75,5 +78,6 @@ public class SignInPage {
     public boolean isSignInBtnDisplayed() {
         return signInBtn.isDisplayed();
     }
+
 
 }
