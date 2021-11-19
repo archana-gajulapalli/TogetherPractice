@@ -33,7 +33,7 @@ public class UnregisteredUserHomePage {
 
 
 
-    @FindBy(xpath="//div[@data-component-id=\"114\"]//h2//span")
+    @FindBy(xpath="//div[@data-component-id='118']//h2//span")
     WebElement firstProductTitle;
 
 
