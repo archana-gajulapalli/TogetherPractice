@@ -14,7 +14,11 @@ public class Hooks extends BaseTest {
         System.setProperty("webdriver.chrome.driver",util.readPropertyFile("CHROME_PATH"));
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+<<<<<<< HEAD
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+=======
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+>>>>>>> parent of 9395029 (Merge pull request #9 from vm31/branch1)
 
     }
     @After
