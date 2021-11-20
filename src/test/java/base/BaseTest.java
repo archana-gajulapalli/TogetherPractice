@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import pages.*;
 
 public class BaseTest {
-    protected UnregisteredUserHomePage homePageObj;
+    protected HomePage homePageObj;
     protected SignInPage signInPageObj;
     protected ProductDescriptionPage productDescriptionPageObj;
     protected TopBlackActionPage topBlackActionPageObj;
@@ -14,7 +14,7 @@ public class BaseTest {
     protected Utility util;
 
     public BaseTest(){
-        homePageObj= PageFactory.initElements(driver, UnregisteredUserHomePage.class);
+        homePageObj= PageFactory.initElements(driver, HomePage.class);
         signInPageObj= PageFactory.initElements(driver, SignInPage.class);
         productDescriptionPageObj= PageFactory.initElements(driver, ProductDescriptionPage.class);
         topBlackActionPageObj= PageFactory.initElements(driver,TopBlackActionPage.class);

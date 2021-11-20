@@ -1,19 +1,14 @@
 package pages;
 
+
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
-import java.security.Signature;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-public class UnregisteredUserHomePage {
+public class HomePage {
     //variable
     public WebDriver driver;
 
-    public UnregisteredUserHomePage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
 
         this.driver = driver;
     }
@@ -28,17 +23,9 @@ public class UnregisteredUserHomePage {
     WebElement searchInputBox;
     @FindBy(xpath = "//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span[1]")
     WebElement searchResultsText;
-    //    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
-//    WebElement priceTxt;
-
-
-
     @FindBy(xpath="//div[@data-component-id='118']//h2//span")
     WebElement firstProductTitle;
 
-
-    @FindBy(xpath = "//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']")
-    WebElement signInBtn;
 
 
     public void clickFirstSearchItem() {
@@ -72,16 +59,7 @@ public class UnregisteredUserHomePage {
         return firstProductTitle.isDisplayed();
     }
 
-    public void clickSignInBtn() {
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-       //mouse action
-        Actions actionProvider = new Actions(driver);
-        actionProvider.moveToElement(signInBtn);
-        //javascript element click // element not interactable exeception
-        WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", signInButton);
-    }
+
     public boolean isCookie(){
         return cookieAccept.isDisplayed();
     }

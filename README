@@ -6,10 +6,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirt
 
 one command to hot fix git !!!!!
 
-///////////////////////////////////////
-
-
-
 
 echo $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -68,20 +64,3 @@ bb61d9e1e19e4c18b877bacf4abf4736
 command + f
 command + shift+ F --> global search
 control+r history of command from terminal
-
-public void clickSignInBtn() {
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-       //mouse action
-        Actions actionProvider = new Actions(driver);
-        actionProvider.moveToElement(signInBtn);
-        //javascript element click // element not interactable exeception
-        WebElement signInButton  = driver.findElement(By.xpath("//*[@id=\"nav-tools\"]/a[@data-nav-role='signin']"));
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", signInButton);
-
-   }
-   
-   locator for amazon>toys search>first product>"Osmo - Super Studio Disney Frozen 2 Starter Kit Learn to Draw Elsa, Anna, Olaf - (Osmo - iPad Base Included) - Ages 5-10+"
-    homepage> firstProductTitle xpath ="//div[@data-component-id="105"]//h2//span"
-        
-    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

@@ -14,6 +14,8 @@ public class SignInPageStep extends BaseTest {
         Assert.assertEquals(signInTitle, title);
     }
 
+
+
     //verification of the text containing signin
     //glue for feature file and step def
     @Then("I get Text:{string}")
@@ -35,6 +37,8 @@ public class SignInPageStep extends BaseTest {
         //compare two strings
         Assert.assertEquals(errormessage, errorMessageFromScenario);
     }
+
+
 
     @And("I enter email address:{string}")
     public void iEnterEmailAddress(String email) {
@@ -61,7 +65,10 @@ public class SignInPageStep extends BaseTest {
     public void iverifySignInBtnDisplayed() {
         Assert.assertTrue(signInPageObj.isSignInBtnDisplayed());
     }
+
 }
+
+
 
 
 

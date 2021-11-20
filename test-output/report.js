@@ -18,7 +18,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on home page",
+  "name": "I launch amazon url",
   "keyword": "Given "
 });
 formatter.match({
@@ -100,7 +100,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on home page",
+  "name": "I launch amazon url",
   "keyword": "Given "
 });
 formatter.match({
@@ -222,7 +222,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on home page",
+  "name": "I launch amazon url",
   "keyword": "Given "
 });
 formatter.match({
@@ -313,7 +313,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on home page",
+  "name": "I launch amazon url",
   "keyword": "Given "
 });
 formatter.match({
