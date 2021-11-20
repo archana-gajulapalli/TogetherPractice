@@ -23,7 +23,16 @@ public class HomePage {
     WebElement searchInputBox;
     @FindBy(xpath = "//*[@id=\"search\"]//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]/span[1]")
     WebElement searchResultsText;
+<<<<<<< HEAD:src/main/java/pages/HomePage.java
     @FindBy(xpath="//div[@data-component-id=\"53\"]//h2//span")
+=======
+    //    @FindBy(xpath="//span[contains(text(),'Price and other details may vary based on product size and colour.')]")
+//    WebElement priceTxt;
+
+
+
+    @FindBy(xpath="//div[@data-component-id='118']//h2//span")
+>>>>>>> 0dba5e62f55afd3e26648339918db0246f44f75e:src/main/java/pages/UnregisteredUserHomePage.java
     WebElement firstProductTitle;
 
 
