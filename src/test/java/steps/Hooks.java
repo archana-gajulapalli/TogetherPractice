@@ -20,7 +20,7 @@ public class Hooks extends BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 >>>>>>> parent of 9395029 (Merge pull request #9 from vm31/branch1)
 
-    }
+
     @After
     public void TearDown(){
         driver.quit();
